@@ -1,0 +1,175 @@
+// .red{
+//   color:red;
+// }
+// .blue{
+//   color:blue;
+// }
+
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+  
+html,body{
+  height:100%;
+  width:100%;
+  color:grey;
+
+}
+
+.flex-container {
+display: flex;
+}
+
+.topnav {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top:0px;
+  left:0px;
+  height: 41px;
+  background-color: white;
+}
+
+  .sidenav {
+    width: 162px;      
+    position: fixed;
+    z-index: 1;
+    top: 41px;
+    left: 0px;
+    background: white;
+    height:100%;
+
+  }
+
+  .sidenavChange {
+    width: 36px;      
+    overflow:hidden;
+    position: fixed;
+    z-index: 1;
+    top: 41px;
+    left: 0px;
+    background: white;
+    height:100%;
+
+  }
+
+  .sidenav, .sidenavChange{
+    a {
+     //padding: 6px 8px 6px 16px;
+     text-decoration: none;
+     font-size: 12px;
+     display: block;
+     color:black;
+     span{
+      font-weight:700
+      }
+     div{
+      border-left: 3px solid white;
+    }
+  }
+}
+
+@mixin active-link($setColor,$setBgColor){
+  .active{
+  a {
+  
+     mat-icon, span{
+        color:$setColor;
+      }
+                 
+      div{
+       border-left: 3px solid $setColor;
+       background-color: $setBgColor;
+     }
+ }
+}
+}
+
+
+.dashboard{
+$setColor: #1875d2;
+$setBgColor:#eeedfb;
+@include active-link($setColor,$setBgColor);
+}
+
+.customers{
+$setColor: #fd8415;
+$setBgColor:#fef2e8;
+@include active-link($setColor,$setBgColor);
+}
+.waitlists{
+$setColor: #8f42af;
+$setBgColor:#f3edf6;
+@include active-link($setColor,$setBgColor);
+}
+.models{
+$setColor: #09a7a8;
+$setBgColor:#e6f5f5;
+@include active-link($setColor,$setBgColor);
+}
+.vehicles{
+$setColor: #5d9de6;
+$setBgColor:#edf3fc;
+@include active-link($setColor,$setBgColor);
+}
+.bookings{
+$setColor: #22cc9c;
+$setBgColor:#e9f9f4;
+@include active-link($setColor,$setBgColor);
+}
+.services{
+$setColor: #b43472;
+$setBgColor:#f7ecf0;
+@include active-link($setColor,$setBgColor);
+}
+.reports{
+$setBgColor:#e9f3f1;
+$setColor: #1b8d75;
+@include active-link($setColor,$setBgColor);
+}
+.reminders{
+$setColor: #fc558b;
+$setBgColor:#feedf1;
+@include active-link($setColor,$setBgColor);
+}
+
+ 
+
+  // .sidenav a:active{
+
+  //   mat-icon, span{
+  //      color:#1875d2;
+  //    }
+
+  //  }
+
+  mat-icon{
+    font-size:15px;
+  }
+
+  .main {
+      position: fixed;
+      top:41px;
+      left:162px;
+      font-size: 28px; /* Increased text to enable scrolling */
+      background-color: #eff3f6;
+      height:100%;
+      width:100%;
+      overflow:scroll;
+
+    }
+  
+    .mainChange{
+      position: fixed;
+      top:41px;
+      left:36px;
+      font-size: 28px; /* Increased text to enable scrolling */
+      background-color: #eff3f6;
+      height:100%;
+      width:100%;
+      overflow:scroll;
+    }  

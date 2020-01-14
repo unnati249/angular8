@@ -1,0 +1,37 @@
+<!-- <app-login></app-login> -->
+<nav *ngIf="currentUser">
+<div class="row">
+    <div class="topnav border-bottom">
+        <div class="flex-container" style="padding: 10px 10px;">
+            <span (click)="changeSidenav()" style="color:rgb(0, 0, 0); cursor:pointer;"><mat-icon>menu</mat-icon></span>
+            <img src="./../assets/images/logo@3x.png" alt="Smiley face" height="20px" width="92px"/>
+            <a style="cursor:pointer;" (click)="logout()">logout</a>
+        </div>
+    </div>
+</div>   
+
+<div class="row">   
+        <div class="border-right"  [ngClass]="sidenavStatus ? 'sidenav' : 'sidenavChange'">
+            <ul>
+                <li  (click)="listClick($event, item)" *ngFor="let item of sidenavLinks">
+                    <div class="{{item.name}}">
+                    
+                        <div [ngClass]="{'active': selectedItem.name == item.name}">
+                            <a routerLink = "/{{ item.name }}">
+                                <div class="flex-container" style="padding-top:10px;padding-left:10px;">
+                                    <mat-icon>{{ item.icon }}</mat-icon>
+                                    <span style="margin-left:10px;">{{ item.name }}</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+           </ul>
+        </div>
+        <div [ngClass]="mainStatus ? 'main' : 'mainChange'">
+           
+        </div>  
+</div>
+</nav>
+
+<router-outlet></router-outlet>
