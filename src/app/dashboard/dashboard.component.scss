@@ -1,0 +1,66 @@
+.smallp{
+    font-size: 12px !important;
+    color:#a6afb2 !important
+}
+.smallp2{
+    font-size: 9px !important;
+    color:#a6afb2 !important
+}
+.motorcycle{
+    border-radius: 50%;
+    background-color: rgb(220,234,249) !important;
+}
+.motorcycle1{
+    border-radius: 50%;
+    background-color: rgb(254,227,244) !important;
+}
+.motorcycle2{
+    border-radius: 50%;
+    background-color: rgb(211,244,235) !important;
+}
+.motorcycle3{
+    border-radius: 50%;
+    background-color: rgb(255,225,228) !important;
+}
+.card{
+    border: none;
+    box-shadow: 0 1px 2px 0 rgba(148,150,159,.3);
+    
+}
+.small{
+    font-size: 12px !important;
+    color:#a6afb2 !important;
+    font-weight: 600;
+}
+
+.rr{
+ color: #5c52dc !important;
+ font-size: 12px !important;
+ font-weight: 600;
+}
+
+
+.project-tab {
+    cursor: pointer;
+}
+.nav-item{
+    text-transform: uppercase;
+    color: black !important;
+    padding-bottom: 14px;
+}
+.project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #0062cc;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 3px solid #4D42D9 !important;
+    font-size: 12px;
+    font-weight: bold;
+}
+.project-tab .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #0062cc;
+    font-size: 12px;
+    font-weight: 600;
+}

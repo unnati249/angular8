@@ -1,1 +1,194 @@
-<div style="position:fixed; top:50px; left:50px;">dashboard</div>
+<div class="container">
+ <div class="row col-md-12">
+    <div class="col-md-7">
+      <div class="row">
+          <div class="col-md-6">
+            <div class="card p-3 mb-2">
+              <div class="row">
+                <div class="col-md-12 d-flex justify-content-between">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <img class="motorcycle p-0" src="../assets/images/business-and-finance.svg" width="80%">
+                        
+                    </div>
+                    <div class="col-md-8 m-0 p-0 text-left">
+                      <p class="head2 m-0 p-0"><strong>14999</strong></p>
+                      <p class="m-0 p-0 smallp">Registered Users</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card p-3 mb-2">
+              <div class="row">
+                <div class="col-md-12 d-flex justify-content-between">
+                  <div class="row">
+                    <div class="col-md-4 icon">
+                        <img class="motorcycle p-2" src="../assets/images/motorcycle.svg" width="80%">
+                    </div>
+                    <div class="col-md-8 m-0 p-0 text-left">
+                      <p class="head2 m-0 p-0"><strong>59914</strong></p>
+                      <p class="m-0 p-0 smallp">Total Bikes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card p-3 mb-2">
+              <div class="row">
+                <div class="col-md-12 d-flex justify-content-between">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <img class="motorcycle1 p-2" src="../assets/images/clipboard.svg" width="80%">
+                    </div>
+                    <div class="col-md-8 m-0 p-0 text-left">
+                      <p class="head2 m-0 p-0"><strong>20143</strong></p>
+                      <p class="m-0 p-0 smallp">Engaged Vehicles</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-2 mb-2">
+              <strong class="mb-3">NEW BOOKINGS</strong>
+              <div class="row">
+                <div class="col-md-12 d-flex justify-content-between">
+                  <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img class="motorcycle2 p-2" src="../assets/images/steering-wheel%20(1).svg" width="50%">
+                        <p class=""><strong>14</strong></p>
+                        <p class="m-0 p-0 smallp">Self Pickup</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                      <img class="motorcycle2 p-2" src="../assets/images/logout.svg" width="50%">
+                      <p class=""><strong>9</strong></p>
+                      <p class="m-0 p-0 smallp">Home Delivery</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card p-3">
+              <div class="row">
+                <div class="col-md-12 d-flex justify-content-between">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <img class="motorcycle3 p-2" src="../assets/images/test.svg" width="80%">
+                    </div>
+                    <div class="col-md-8 m-0 p-0 text-left">
+                      <p class="head2 m-0 p-0"><strong>500</strong></p>
+                      <p class="m-0 p-0 smallp">Lost Vehicles</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+      </div>
+    
+    </div>
+   
+    <div class="col-md-5 mr-0">
+      <div class="card p-3 pr-0"> 
+        <div class="col-md-12 d-flex justify-content-between">
+          <strong class="pt-0">BOOKING OVERVIEW</strong>
+          <div class="d-flex d-inline">
+            <p class="px-2 rr" >7D</p>
+            <p class="px-2 smallp">1M</p>
+            <p class="px-2 smallp">6M</p>
+          </div>
+        </div>    
+        <canvas class="p-0 mb-1" id="lineChart" ></canvas>
+      </div>
+    </div>
+ </div>
+ 
+<div class="row">
+  <div class="col-md-8  ">
+    <section id="tabs" class="project-tab mt-3 ml-3 card p-0">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 m-0 p-0">
+                  <nav class="mt-3">
+                      <div class="nav nav-tabs px-4 nav-fill" id="nav-tab" role="tablist">
+                          <a class="nav-item nav-link" (click)="changeTab(0)"  [ngClass]="{active: currentTab == 0}">NEW BOOKINGS</a>
+                          <a class="nav-item nav-link" (click)="changeTab(1)"  [ngClass]="{active: currentTab == 1}">expired booking</a>
+                          <a class="nav-item nav-link" (click)="changeTab(2)"  [ngClass]="{active: currentTab == 2}">lapse bOOking</a>
+                      </div>
+                  </nav>
+                  <div class="p-3" *ngIf="currentTab == 0">
+                    <p>Rakesh 1</p>
+                  </div>
+
+                  <div class="p-3" *ngIf="currentTab == 1">
+                    <p>Rakesh 11</p>
+                  </div>
+
+                  <div class="p-3" *ngIf="currentTab == 2">
+                    <p>Rakesh 111</p>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-md-4 mt-3">
+    <div class="card p-3 mb-2 border-bottom">
+      <p><strong>B TO B VEHICLE COUNT</strong></p>
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-between  m-1">
+          <div class="col-md-8 ">
+            <p class="m-0  p-0 smallp"><strong>CUSTOMER</strong></p>   
+          </div>
+          <div class="col-md-4 m-0 p-0 pl-5text-left">
+            <p class="m-0 p-0 smallp"><strong>COUNT</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card p-3 mb-2 ">
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-between border ">
+            <div class="col-md-8 ">
+              <p class="m-0  p-0 smallp"><strong>CUSTOMER</strong></p>   
+            </div>
+            <div class="col-md-4">
+              <p class="m-0 p-0 smallp"><strong>COUNT</strong></p>
+            </div>
+          </div>
+        </div> 
+      <div class="row ">
+        <div class="col-md-12 d-flex justify-content-between border mt-1 ">
+            <div class="col-md-8 ">
+              <p class="m-0  p-0 smallp"><strong>CUSTOMER</strong></p>   
+            </div>
+            <div class="col-md-4">
+              <p class="m-0 p-0 smallp"><strong>COUNT</strong></p>
+            </div>
+        </div>
+       </div> 
+       <div class="row ">
+        <div class="col-md-12 d-flex justify-content-between border mt-1">
+            <div class="col-md-8 ">
+              <p class="m-0  p-0 smallp"><strong>CUSTOMER</strong></p>   
+            </div>
+            <div class="col-md-4">
+              <p class="m-0 p-0 smallp"><strong>COUNT</strong></p>
+            </div>
+        </div>
+       </div>  
+
+      </div>
+      
+    
+
+
+        
+
+</div>
+
+</div>
