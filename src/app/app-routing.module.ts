@@ -10,7 +10,7 @@ import { BookingsComponent } from './bookings/bookings.component';
 import { ServicesComponent } from './services/services.component';
 import { ReportsComponent } from './reports/reports.component';
 import { RemindersComponent } from './reminders/reminders.component';
-
+import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './auth.guard';
 
 
@@ -26,6 +26,7 @@ const routes: Routes = [
   {path:'services',component:ServicesComponent},
   {path:'reports',component:ReportsComponent},
   {path:'reminders',component:RemindersComponent},
+  {path:'profile',component:ProfileComponent},
   { path: '**', redirectTo: '' },
 
 ];
@@ -45,6 +46,7 @@ export const RoutingComponent = [
   BookingsComponent,
   ServicesComponent,
   ReportsComponent,
-  RemindersComponent
+  RemindersComponent,
+  ProfileComponent
 ];
 

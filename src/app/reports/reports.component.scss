@@ -1,0 +1,128 @@
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top: -6px;
+  padding: 0px 5px 0px 5px;
+  background-color: #fefefe;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1;
+  z-index: 1;
+  outline: none !important;
+  box-shadow: none !important
+}
+
+textarea:focus ~ .floating-label,
+textarea:not(:focus):valid ~ .floating-label{
+  top: -7px;
+  padding: 0px 5px 0px 5px;
+  background-color: #fefefe;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1;
+  z-index: 1;
+  outline: none !important;
+  box-shadow: none !important
+}
+select:focus ~ .floating-label,
+select:not(:focus):valid ~ .floating-label{
+  top: -7px;
+  padding: 0px 5px 0px 5px;
+  background-color: #fefefe;
+  left: 20px;
+  font-size: 9px;
+  opacity: 1;
+  z-index: 1;
+  outline: none !important;
+  box-shadow: none !important;
+  font-weight: 600;
+}
+
+.inputText {
+outline: none !important;
+}
+input:focus, textarea:focus, select:focus{
+  outline: none !important;
+  box-shadow: none !important
+}
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 30px;
+  top: 8px;
+  transition: 0.2s ease all;
+  font-size: 12px;
+  font-weight: 700;
+  
+}
+
+.bnm{
+  border-bottom: 1px solid blue !important; 
+}
+.vbn{
+    width:60px;
+}
+.smallp{
+    font-size: 12px !important;
+    color:#a6afb2 !important
+}
+.card{
+background-color: none !important;
+border:0px;
+}
+.backg{
+  background-color: #B43472;
+  border-radius: 3px;
+  color:white;
+  font-weight: 600;
+  font-size:12px;
+  border:none;
+}
+
+.backg1{
+  background-color: #C0C0C0;
+  border-radius: 3px;
+  color:white;
+  font-weight: 600;
+  font-size:12px;
+  border:none;
+}
+
+.backz2{
+  background-color: white !important;
+}
+.custom{
+  background-color: white !important;
+}
+.backg3{
+  background-color: #F5E8EE;
+  color: rgb(182,58,118);
+  font-size: 12px;
+  font-weight: 700;
+  border: none;
+  letter-spacing: 0.5px;
+}
+.backg4{
+  color:rgb(203,206,213);
+  font-size: 12px;
+  font-weight: 600;
+}
+.backg5{
+  font-size: 14px;
+  font-weight: 600;
+}
+.border{
+  border-radius: 3px;
+}
+.new1{
+  
+  margin-top:2rem
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+.fa fa-arrow-left{
+  cursor: pointer;
+}
