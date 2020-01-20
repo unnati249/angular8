@@ -1,1 +1,181 @@
-<p>services works!</p>
+
+<div class="container">
+  
+    <div class="col-md-6 p-0 pb-3 m-0 pl-4 text-left d-flex">
+      <h3 class="header"><strong>SERVICES</strong></h3>
+    </div>
+  
+    <div>
+        <div class="row col-md-12 ">
+            <div class="col-md-2 ">
+                <div class="card p-3 mb-2 w-20">
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-between">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="motorcycle p-0" src="../assets/images/folder.svg" width="120%">
+                            </div>
+                            <div class="col-md-8 m-0 p-0 text-left">
+                            <p class="head2 m-0 p-0"><strong>5222</strong></p>
+                            <p class="m-0 p-0 smallp">New Services</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card p-3 mb-2 w-20">
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-between">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="motorcycle p-0" src="../assets/images/calendar.svg" width="120%">
+                            </div>
+                            <div class="col-md-8 m-0 p-0 text-left">
+                            <p class="head2 m-0 p-0"><strong>149</strong></p>
+                            <p class="m-0 p-0 smallp">Assigned</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card p-3 mb-2 w-20">
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-between">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="motorcycle p-0" src="../assets/images/check.svg" width="120%">
+                                
+                            </div>
+                            <div class="col-md-8 m-0 p-0 text-left">
+                            <p class="head2 m-0 p-0"><strong>914</strong></p>
+                            <p class="m-0 p-0 smallp">Invoice Pending</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card p-3 mb-2 w-20">
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-between">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="motorcycle p-0" src="../assets/images/heart.svg" width="120%">
+                                
+                            </div>
+                            <div class="col-md-8 m-0 p-0 text-left">
+                            <p class="head2 m-0 p-0"><strong>527</strong></p>
+                            <p class="m-0 p-0 smallp">Completed</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div> 
+            <div class="col-md-2">
+                <div class="card p-3 mb-2 w-40">
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-between">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="motorcycle p-0" src="../assets/images/block.svg" width="120%">
+                                
+                            </div>
+                            <div class="col-md-8 m-0 p-0 text-left">
+                            <p class="head2 m-0 p-0"><strong>0914</strong></p>
+                            <p class="m-0 p-0 smallp">Cancelled</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+  
+  
+    <div class="row ">
+      <div class="col-md-12">
+        <section id="tabs" class="project-tab mt-3 ml-3 card p-0">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 m-0 p-0">
+                      <nav class="mt-3 row">
+                          <div class="nav nav-tabs px-4 nav-fill col-md-6" id="nav-tab" role="tablist">
+                              <a class="nav-item nav-link" (click)="changeTab(0)"  [ngClass]="{active: currentTab == 0}">New</a>
+                              <a class="nav-item nav-link" (click)="changeTab(1)"  [ngClass]="{active: currentTab == 1}">Assigned</a>
+                              <a class="nav-item nav-link" (click)="changeTab(2)"  [ngClass]="{active: currentTab == 2}">Invoice Pending</a>
+                              <a class="nav-item nav-link" (click)="changeTab(3)"  [ngClass]="{active: currentTab == 3}">Completed</a>
+                              <a class="nav-item nav-link" (click)="changeTab(4)"  [ngClass]="{active: currentTab == 4}">Cancelled</a>
+                          </div>
+                          <div class="col-md-6 mt-1 bnm text-right d-flex justify-content-end pr-5">
+                            <i class="fa fa-search px-3 pt-2" aria-hidden="true"></i>
+                            <p class="px-3 pt-2">1-12 of {{customers.length}}</p>
+                            <i class="fa fa-angle-left pl-3 pt-3 pr-2" aria-hidden="true"></i>
+                            <i class="fa fa-angle-right pl-2 pt-3 pr-3" aria-hidden="true"></i>
+                            <button class="custom px-2 p-0">
+                              <i class="fa fa-filter px-1" aria-hidden="true"></i>
+                              Filter</button>
+                          </div>
+                      </nav>
+                      <div class="p-3" *ngIf="currentTab == 0">
+                       <table class="table">
+                         <thead>
+                          <tr>
+                            <th>SERVICE ID</th>
+                            <th>CUSTOMER</th>
+                            <th>BOOKING ID</th>
+                            <th>S.MOBILE</th>
+                            <th>SERVICE PLACE</th>
+                            <th>SERVICE DATE</th>
+                            <th>TIME</th>
+                          </tr>
+                         </thead>
+                         <tbody>
+                           <tr *ngFor="let data of customers" >
+                             <th>{{data.service_id}}</th>
+                             <th>{{data.customer}}</th>
+                             <th>{{data.booking_id}}</th>
+                             <th>{{data.s_mobile}}</th>
+                             <th>{{data.service_place}}</th>
+                             <th>{{data.service_date}}</th>
+                             <th>{{data.time}}</th>
+                           </tr>
+                         </tbody>
+                       </table>
+                      </div>
+    
+                      <div class="p-3" *ngIf="currentTab == 1">
+                        <p>Rakesh 11</p>
+                      </div>
+    
+                      <div class="p-3" *ngIf="currentTab == 2">
+                        <p>Rakesh 111</p>
+                      </div>
+    
+                      <div class="p-3" *ngIf="currentTab == 3">
+                        <p>Rakesh 1111</p>
+                      </div>
+    
+                      <div class="p-3" *ngIf="currentTab == 4">
+                        <p>Rakesh 11111</p>
+                      </div>
+    
+    
+                  </div>
+              </div>
+          </div>
+        </section>
+        
+    </div>
+   
+    <button class="custom px-2 p-0">
+        <i class="fa fa-filter px-1" aria-hidden="true"></i>
+        Filter</button>
+
+    </div>

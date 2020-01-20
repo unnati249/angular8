@@ -3,14 +3,42 @@
 // }
 // .blue{
 //   color:blue;
+
+
 // }
+ .bgh{
+   max-height: 400px !important;
+ }
+.jcb{
+  margin-left:491px !important;
+  margin-bottom:40px !important;
+  margin-bottom: 5px !important;
+}
 
+.form-control{
+  width:40%;
+  height:50%;
+  margin-bottom:40px;
+  border-radius:0 !important;
+  margin-left:50px;
+  padding-left: 20px;
+  font-size: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  
+  
+}
 
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
 
+  outline: none;
+  box-shadow: none;
+
+}
 *{
   margin:0;
   padding:0;
-  box-sizing: border-box;
+ 
 }
   
 html,body{

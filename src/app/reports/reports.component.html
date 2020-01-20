@@ -1,1 +1,87 @@
-<p>reports works!</p>
+<div class="container">
+<div class="card p-3">
+  <div class="col-md-6">
+    <a routerLink=""><i class="fa fa-arrow-left" style="font-size:14px;color:#B43472"> Back</i></a>
+ 
+</div>
+<div class="col-md-4 p-0 pt-2 m-0 pl-3 text-left d-flex">
+<p class="header"><strong>Create New Service</strong>  
+</div>
+
+<div class="row col-md-12">
+    <div class="col-md-4 ">
+        <input type="text" v-model="vehicle_number" class="inputText form-control" required />
+        <span class="floating-label" >Reg.Number</span>
+    </div>
+    <div class="col-md-3">
+      <button type="submit" class=" px-3 py-2 backg3">Fetch Details</button>
+    </div> 
+</div>
+<hr class="new1">
+<div class="row col-md-12 mt-0">
+    <div class="col-md-3 pt-2">
+      <p class="mb-0 backg4">Model</p>
+      <span class="backg5">Honda Activa 5G</span>
+    </div>
+    <div class="col-md-3 pt-2">
+        <p class="mb-0 backg4">Last Serviced KM</p>
+         <span class="backg5">20122</span>
+    </div>
+    <div class="col-md-3 pt-2">
+        <p class="mb-0 backg4">Last Service Date</p>
+        <span class="backg5">24-05-2019</span>
+    </div>
+    <div class="col-md-3 border p-2 ">
+        <p class="mb-0 backg4">Customer Name</p>
+        <span class="backg5">Cleopatra</span>
+    </div>
+  </div>
+
+    
+</div>   
+<div class="card mt-3 mb-5 pb-5">
+  <p class=" pl-4 pt-3 "><strong>SERVICE INFO</strong></p>
+  <div class="form row px-4 pt-4">
+<div class="col-md-4 mb-2">
+    <input list="hosting-plan4" type="number" class="form-control" required>
+    <span class="floating-label">Service Type</span>
+</div>
+<div class="col-md-4 mb-2">
+  <input list="hosting-plan5" type="text" class="form-control"  required>
+  <span class="floating-label">Current KM</span>
+</div>
+    <div class="col-md-4 mb-2">
+      <input list="hosting-plan6" type="text" class="form-control" required>
+        <span class="floating-label">Comments(optional)</span>
+    </div>
+</div>
+  <div class="form row p-4">
+    <div class="col-md-4 mb-4">
+        <input list="hosting-plan4" type="number" class="form-control"  required>
+          <datalist id="hosting-plan4">
+               <option value=""></option>
+          </datalist>
+      <span class="floating-label">Service Place</span>
+    </div>
+    <div class="col-md-4 mb-4">
+      <input type="date"  class="inputText form-control" required/>
+         <span class="floating-label">Procure date</span>
+    </div>
+        <div class="col-md-4 mb-4">
+          <input list="hosting-plan6" type="text" class="form-control" v-model="abs" required>
+          <!-- <datalist id="hosting-plan6">
+               <option value="Single Channel"></option>
+               <option value="Dual Channel"></option>        
+               <option value="Without ABS"></option>                                                             
+          </datalist> -->
+            <span class="floating-label">Service Time</span>
+        </div>
+  </div>
+
+<div class="col-md-10 mb-2">
+  <button type="submit" class=" px-5 py-2 backg">Create New Service </button>
+  <button type="submit" class="backg1 py-2 ml-3 px-5">Cancel</button>
+</div>   
+</div>
+        
+</div>

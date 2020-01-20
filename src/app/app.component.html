@@ -1,11 +1,22 @@
 <!-- <app-login></app-login> -->
-<nav *ngIf="currentUser">
-<div class="row">
+<nav *ngIf="currentUser" class="mb-5">
+<div class="row ">
     <div class="topnav border-bottom">
         <div class="flex-container" style="padding: 10px 10px;">
             <span (click)="changeSidenav()" style="color:rgb(0, 0, 0); cursor:pointer;"><mat-icon>menu</mat-icon></span>
             <img src="./../assets/images/logo@3x.png" alt="Smiley face" height="20px" width="92px"/>
-            <a style="cursor:pointer;" (click)="logout()">logout</a>
+            <!-- <a style="cursor:pointer;" (click)="logout()">logout</a> -->
+            <input class="form-control form-control-borderless" type="search" placeholder="Search Customer, Booking, etc">
+            <div class="row col-md-2 m-0 p-0 jcb">
+                <div class="col-md-3 m-0 p-0 mb-5">
+                  <img src="../assets/images/profile1.jpg" class="" style="border-radius:70%;" width="60%" height="90%">
+                </div>
+                <div class="col-md-9 pt-0   ">
+                  <!-- <img src="../assets/images/profile1.jpg" class="p-2" style="border-radius: 50%;" width="20%"> -->
+                  <h6 class="m-0 p-0" style="font-size: 10px; color:blue"><strong>Seleucus Nicator</strong></h6>
+                  <p class="mb-2 " style="color:gray;font-size:10px;" (click)="logout()">logout</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>   
@@ -33,5 +44,6 @@
         </div>  
 </div>
 </nav>
+
 
 <router-outlet></router-outlet>

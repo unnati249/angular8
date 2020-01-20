@@ -13,23 +13,16 @@ import { Observable, throwError } from 'rxjs';
 })
 export class ApiService {
   
-  customerCountProperty;
-
   apiURL: string = 'https://api.on-track.in/api';
   getModels =  this.apiURL + '/getModels';
   authenticate = this.apiURL + '/authenticate';
-  customerList = this.apiURL + '/getCustomerList';
-  customerCount = this.apiURL + '/getCustomerCount';
 
-  constructor(private http: HttpClient) {
-   this.customerCountProperty = this.customerCountFunction();
-  }
-  customerCountFunction(){
-    this.http.get(this.customerCount).subscribe(response => {
-      //  this.customerCountProperty = response[0]['count'];
-      console.log(response[0]['count']);
-      return response[0]['count'];
-  });
-  }
+  constructor(private http: HttpClient) {}
 
-  }
+  
+
+//   getModels() {
+//     return this.http.get( this.apiURL + '/getModels');
+// }
+
+}

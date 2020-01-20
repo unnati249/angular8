@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,9 +20,7 @@ import { AuthInterceptor } from './auth.interceptor';
 import { LoginComponent } from './login/login.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {ScrollingModule} from '@angular/cdk/scrolling';
-import { ConfigurationServiceService } from './configuration-service.service';
-
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -38,8 +36,8 @@ import { ConfigurationServiceService } from './configuration-service.service';
     ReportsComponent,
     RemindersComponent,
     LoginComponent,
-    NavigationComponent
-    
+    NavigationComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -48,21 +46,13 @@ import { ConfigurationServiceService } from './configuration-service.service';
     AngularMaterialModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    ScrollingModule
+    ReactiveFormsModule
   ],
   providers: [
 
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
-      multi: true
-    },
-    {
-      provide: APP_INITIALIZER,
-      useFactory: (configService: ConfigurationServiceService) =>
-        () => configService.loadConfigurationData(),
-      deps: [ConfigurationServiceService],
       multi: true
     }
 

@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthenticationService } from './authentication.service';
 import { Router } from '@angular/router';
 import { Customer } from './customer';
-
+import { chart }  from 'chart.js';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
